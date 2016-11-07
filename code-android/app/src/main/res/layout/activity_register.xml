@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layout_root_register"
+    tools:context="com.university.project.agendat2.ui.activity.RegisterActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="25dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_marginBottom="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/signup_textSize"/>
+
+        <!-- begin: Datos usuario -->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="@string/username"
+            android:id="@+id/et_username"
+            android:minHeight="?android:attr/listPreferredItemHeight"
+            android:visibility="gone"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="@string/password"
+            android:id="@+id/et_password"
+            android:minHeight="?android:attr/listPreferredItemHeight"
+            android:visibility="gone"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="@string/confirm_password"
+            android:id="@+id/et_confirm_password"
+            android:minHeight="?android:attr/listPreferredItemHeight"
+            android:visibility="gone"/>
+        <!-- end: Datos usuario -->
+
+        <!-- begin: Datos persona -->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="@string/name"
+            android:id="@+id/et_name"
+            android:minHeight="?android:attr/listPreferredItemHeight"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="@string/last_name"
+            android:id="@+id/et_last_name"
+            android:minHeight="?android:attr/listPreferredItemHeight"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:hint="@string/email"
+            android:id="@+id/et_email"
+            android:minHeight="?android:attr/listPreferredItemHeight"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="@string/dni"
+            android:id="@+id/et_dni"
+            android:minHeight="?android:attr/listPreferredItemHeight"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="@string/cellphoneNumber"
+            android:id="@+id/et_cellphone_number"
+            android:minHeight="?android:attr/listPreferredItemHeight"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="4dp"
+                android:textSize="18.5sp"
+                android:alpha="0.65"
+                android:text="@string/sex"/>
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:id="@+id/rgroup_sex">
+                <RadioButton
+                    android:id="@+id/rbtn_male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/signup_rbtn_marginRight"
+                    android:text="@string/m"
+                    android:checked="true"/>
+                <RadioButton
+                    android:id="@+id/rbtn_female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/f"/>
+            </RadioGroup>
+
+        </LinearLayout>
+        <!-- end: Datos persona -->
+
+        <Button
+            android:layout_marginTop="@dimen/login_btn_marginTop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/btn_padding"
+            android:id="@+id/btn_save"
+            android:text="@string/guardar"/>
+
+    </LinearLayout>
+</ScrollView>

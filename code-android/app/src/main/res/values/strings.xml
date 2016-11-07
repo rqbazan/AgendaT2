@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">AgendaT2</string>
+    <string name="login">Log in</string>
+    <string name="username">Usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="confirm_password">Repetir contraseña</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="registrate">Registrate</string>
+    <string name="signup">Sign up</string>
+    <string name="name">Nombres</string>
+    <string name="last_name">Apellidos</string>
+    <string name="email">Correo-e</string>
+    <string name="cellphoneNumber">Celular</string>
+    <string name="dni">DNI</string>
+    <string name="sex">Sexo</string>
+    <string name="m">M</string>
+    <string name="f">F</string>
+    <string name="guardar">Guardar</string>
+    <string name="msg_password">Las contraseñas no coiciden</string>
+    <string name="new_contact">Nuevo contacto</string>
+    <string name="logout">Log out</string>
+    <string name="msg_no_data">Aún no tienes contactos en tu agenda</string>
+</resources>

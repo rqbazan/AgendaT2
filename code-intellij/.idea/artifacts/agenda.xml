@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="agenda">
+    <output-path>$PROJECT_DIR$/out/artifacts/agenda</output-path>
+    <root id="archive" name="agenda.war">
+      <element id="artifact" artifact-name="PresentacionWebMVC:Web exploded" />
+    </root>
+  </artifact>
+</component>

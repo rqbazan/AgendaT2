@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="@string/new_contact"
+        android:id="@+id/action_new_contact"
+        android:name="@string/new_contact"
+        android:icon="@android:drawable/arrow_down_float"/>
+    <item
+        android:title="@string/logout"
+        android:id="@+id/action_logout"
+        android:name="@string/logout" />
+</menu>

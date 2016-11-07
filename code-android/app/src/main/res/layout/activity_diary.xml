@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.university.project.agendat2.ui.activity.DiaryActivity">
+
+    <FrameLayout
+        android:id="@+id/layout_no_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="@dimen/image_face_size"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_face_sad"
+                android:alpha="0.6"/>
+            <TextView
+                android:paddingTop="@dimen/message_nodata_padding_top"
+                android:paddingLeft="@dimen/message_nodata_padding_left"
+                android:paddingRight="@dimen/message_nodata_padding_right"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_message"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/msg_no_data"
+                android:textSize="@dimen/message_nodata_size"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <ListView
+        android:id="@+id/list_diary"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</FrameLayout>
