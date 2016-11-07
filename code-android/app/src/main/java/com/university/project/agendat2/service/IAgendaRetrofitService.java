@@ -30,7 +30,7 @@ interface IAgendaRetrofitService {
     @POST("restinsertcontact")
     Observable<Integer> insertContact(@Query("idUser") int idUser, @Body Contact contact);
 
-    @Headers({"Accept: application/json", "Content-Type: application/json"})
+    @Headers({"Accept: application/json", "Content-Type: application/json; charset=UTF-8"})
     @POST("restinsertuser")
     Observable<Integer> insertUser(@Body User user);
 }
