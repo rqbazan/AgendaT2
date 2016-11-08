@@ -15,6 +15,14 @@
             <artifactId>forms</artifactId>
             <version>1.2.1</version>
         </dependency>
+
+        <!-- begin: Dependencias para JDBC for MySQL-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.6</version>
+        </dependency>
+        <!-- end: Dependencias para JDBC for MySQL-->
     </dependencies>
 
     <build>

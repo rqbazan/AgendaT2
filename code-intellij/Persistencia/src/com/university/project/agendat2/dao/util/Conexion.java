@@ -13,6 +13,7 @@ public class Conexion {
     // JDBC driver name and database URL
     private static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
     private static final String DB_URL = "jdbc:mysql://localhost/dbAgendaT2";
+    private static final String REMOTE_DB_URL = "jdbc:mysql://40.112.60.102:3306/dbagendat2";
 
     //  Database credentials
     private static final String DB_USER = "root";
@@ -21,7 +22,7 @@ public class Conexion {
     public static Connection getConnection() throws Exception{
         try {
             Class.forName(JDBC_DRIVER);
-            Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
+            Connection conn = DriverManager.getConnection(REMOTE_DB_URL, DB_USER, DB_PASSWORD);
             return conn;
         }catch (Exception e){
             throw e;

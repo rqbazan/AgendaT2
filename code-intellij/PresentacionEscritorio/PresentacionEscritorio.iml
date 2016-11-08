@@ -13,6 +13,8 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="Entidades" />
     <orderEntry type="module" module-name="Negocio" />
+    <orderEntry type="module" module-name="Persistencia" />
     <orderEntry type="library" name="Maven: com.jgoodies:forms:1.2.1" level="project" />
+    <orderEntry type="library" name="Maven: mysql:mysql-connector-java:5.1.6" level="project" />
   </component>
 </module>

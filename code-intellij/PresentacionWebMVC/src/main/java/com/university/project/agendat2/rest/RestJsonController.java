@@ -4,7 +4,6 @@ import com.university.project.agendat2.business.ContactBL;
 import com.university.project.agendat2.business.UserBL;
 import com.university.project.agendat2.business.util.ApplicationException;
 import com.university.project.agendat2.model.Contact;
-import com.university.project.agendat2.model.Person;
 import com.university.project.agendat2.model.User;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
