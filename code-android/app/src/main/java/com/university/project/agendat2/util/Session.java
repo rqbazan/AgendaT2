@@ -10,12 +10,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by santiago on 03/11/16.
+ * Inspirado por WandoSession de Grupo Wando S.A.C
  */
 
 public class Session {
     private final static String TAG = Session.class.getSimpleName();
-    private final static String KEY = "com.university.project.agendat2";
+    private final static String KEY = "com.university.project.agendat2.session";
     private Context context;
     private Map<String, Object> data;
 

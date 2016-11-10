@@ -15,6 +15,7 @@
             android:layout_marginBottom="25dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
             android:textSize="@dimen/signup_textSize"/>
 
         <!-- begin: Datos usuario -->
@@ -36,14 +37,6 @@
             android:minHeight="?android:attr/listPreferredItemHeight"
             android:visibility="gone"/>
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:hint="@string/confirm_password"
-            android:id="@+id/et_confirm_password"
-            android:minHeight="?android:attr/listPreferredItemHeight"
-            android:visibility="gone"/>
         <!-- end: Datos usuario -->
 
         <!-- begin: Datos persona -->
@@ -128,7 +121,7 @@
             android:layout_height="wrap_content"
             android:padding="@dimen/btn_padding"
             android:id="@+id/btn_save"
-            android:text="@string/guardar"/>
+            android:text="@string/save"/>
 
     </LinearLayout>
 </ScrollView>

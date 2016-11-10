@@ -6,13 +6,14 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ListView;
 
 import com.university.project.agendat2.R;
 import com.university.project.agendat2.model.Contact;
 import com.university.project.agendat2.model.User;
-import com.university.project.agendat2.service.AgendaAgendaRestServiceImpl;
+import com.university.project.agendat2.service.AgendaRestServiceImpl;
 import com.university.project.agendat2.service.IAgendaRestService;
 import com.university.project.agendat2.ui.adapter.ContactAdapter;
 
@@ -28,7 +29,6 @@ public class DiaryActivity extends BaseActivity {
     @BindView(R.id.list_diary) ListView list_diary;
     @BindView(R.id.layout_no_data) FrameLayout layout_no_data;
 
-    private IAgendaRestService restService;
     private ContactAdapter adapter;
 
     @Override
@@ -42,7 +42,7 @@ public class DiaryActivity extends BaseActivity {
 
     private void init(){
         session = Session.getSession(this);
-        restService = new AgendaAgendaRestServiceImpl(this);
+        restService = new AgendaRestServiceImpl(this);
         progressDialog = new ProgressDialog(this);
         progressDialog.setTitle("Cargando");
         progressDialog.setMessage("Cargando lista de contactos...");
@@ -80,6 +80,9 @@ public class DiaryActivity extends BaseActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == RC_ADD_NEW_CONTACT){
             if (resultCode == RESULT_OK){
+                if (layout_no_data.getVisibility() == View.VISIBLE){
+                    setVisibilityLayoutNoData(View.INVISIBLE);
+                }
                 Contact contact = (Contact)data.getSerializableExtra("newContact");
                 adapter.add(contact);
             }

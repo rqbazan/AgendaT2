@@ -16,7 +16,7 @@ import com.university.project.agendat2.model.Contact;
 import com.university.project.agendat2.model.Person;
 import com.university.project.agendat2.model.SexType;
 import com.university.project.agendat2.model.User;
-import com.university.project.agendat2.service.AgendaAgendaRestServiceImpl;
+import com.university.project.agendat2.service.AgendaRestServiceImpl;
 import com.university.project.agendat2.service.IAgendaRestService;
 import com.university.project.agendat2.util.Session;
 
@@ -31,7 +31,6 @@ public class RegisterActivity extends BaseActivity {
     @BindView(R.id.tv_title) TextView tv_title;
     @BindView(R.id.et_username) EditText et_username;
     @BindView(R.id.et_password) EditText et_password;
-    @BindView(R.id.et_confirm_password) EditText et_confirm_password;
     @BindView(R.id.et_name) EditText et_name;
     @BindView(R.id.et_last_name) EditText et_last_name;
     @BindView(R.id.et_email) EditText et_email;
@@ -41,7 +40,6 @@ public class RegisterActivity extends BaseActivity {
 
     private boolean isVisibleUserDataInputs;
     private Session session;
-    private IAgendaRestService restService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,9 +66,8 @@ public class RegisterActivity extends BaseActivity {
 
     private void init(){
         et_password.setTypeface(Typeface.DEFAULT);
-        et_confirm_password.setTypeface(Typeface.DEFAULT);
         session = Session.getSession(this);
-        restService = new AgendaAgendaRestServiceImpl(this);
+        restService = new AgendaRestServiceImpl(this);
         progressDialog = new ProgressDialog(this);
         progressDialog.setTitle("Cargando");
         progressDialog.setMessage("Guardando en la base de datos...");
@@ -80,16 +77,10 @@ public class RegisterActivity extends BaseActivity {
     private void turnVisibilityViewsOfUser(int value){
         et_username.setVisibility(value);
         et_password.setVisibility(value);
-        et_confirm_password.setVisibility(value);
     }
 
     @OnClick(R.id.btn_save)
     void onClickBtnSave(){
-        if(isVisibleUserDataInputs && !et_password.getText().toString().equals(et_password.getText().toString())){
-            Toast.makeText(this, R.string.msg_password, Toast.LENGTH_SHORT).show();
-            return;
-        }
-
         if(isVisibleUserDataInputs){
             final User newUser = new User();
             newUser.setUsername(et_username.getText().toString().trim());

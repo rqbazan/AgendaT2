@@ -11,7 +11,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class ErrorController {
     @RequestMapping(value = "/error")
-    public String getRegisterUser(Model model) {
+    public String error(Model model) {
+        if(model.asMap().isEmpty())
+            model.addAttribute("error", "¿Intentaste entrar aqui aproposito? L7u7");
         return "error";
     }
 }

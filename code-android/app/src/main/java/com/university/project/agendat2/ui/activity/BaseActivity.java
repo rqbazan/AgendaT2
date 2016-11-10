@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.university.project.agendat2.service.IAgendaRestService;
 import com.university.project.agendat2.util.Session;
 
 
@@ -17,6 +18,7 @@ import com.university.project.agendat2.util.Session;
 public class BaseActivity extends AppCompatActivity{
     protected ProgressDialog progressDialog;
     protected Session session;
+    protected IAgendaRestService restService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -8,7 +8,7 @@ import android.util.Log;
 import android.widget.EditText;
 
 import com.university.project.agendat2.R;
-import com.university.project.agendat2.service.AgendaAgendaRestServiceImpl;
+import com.university.project.agendat2.service.AgendaRestServiceImpl;
 import com.university.project.agendat2.service.IAgendaRestService;
 import com.university.project.agendat2.util.Session;
 
@@ -22,8 +22,6 @@ public class LoginActivity extends BaseActivity{
     @BindView(R.id.et_username) EditText et_username;
     @BindView(R.id.et_password) EditText et_password;
 
-    private IAgendaRestService restService;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,7 +33,7 @@ public class LoginActivity extends BaseActivity{
     protected void init() {
         et_password.setTypeface(Typeface.DEFAULT);
         session = Session.getSession(this);
-        restService = new AgendaAgendaRestServiceImpl(this);
+        restService = new AgendaRestServiceImpl(this);
         progressDialog = new ProgressDialog(this);
         progressDialog.setTitle("Cargando");
         progressDialog.setMessage("Autentificación en progreso...");

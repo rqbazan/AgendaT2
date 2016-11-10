@@ -15,8 +15,7 @@
     <string name="sex">Sexo</string>
     <string name="m">M</string>
     <string name="f">F</string>
-    <string name="guardar">Guardar</string>
-    <string name="msg_password">Las contraseñas no coiciden</string>
+    <string name="save">Guardar</string>
     <string name="new_contact">Nuevo contacto</string>
     <string name="logout">Log out</string>
     <string name="msg_no_data">Aún no tienes contactos en tu agenda</string>
