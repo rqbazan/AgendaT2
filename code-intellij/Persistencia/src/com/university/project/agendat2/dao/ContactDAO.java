@@ -80,4 +80,21 @@ public class ContactDAO {
                 conn.close();
         }
     }
+
+    public boolean getByDni(int idUser, String dni) throws Exception{
+        Connection conn = null;
+        try {
+            conn = Conexion.getConnection();
+            CallableStatement cst = conn.prepareCall("{call sp_GetContactByDni(?,?)}");
+            cst.setInt(1, idUser);
+            cst.setString(2, dni);
+            ResultSet rs = cst.executeQuery();
+            return rs.next();
+        }catch (Exception e){
+            throw e;
+        }finally {
+            if (conn != null)
+                conn.close();
+        }
+    }
 }

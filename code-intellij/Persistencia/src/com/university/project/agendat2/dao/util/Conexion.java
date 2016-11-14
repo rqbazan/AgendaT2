@@ -22,7 +22,7 @@ public class Conexion {
     public static Connection getConnection() throws Exception{
         try {
             Class.forName(JDBC_DRIVER);
-            Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
+            Connection conn = DriverManager.getConnection(REMOTE_DB_URL, DB_USER, DB_PASSWORD);
             return conn;
         }catch (Exception e){
             throw e;

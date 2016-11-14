@@ -2,8 +2,10 @@ package com.university.project.agendat2.business;
 
 import com.university.project.agendat2.business.util.*;
 import com.university.project.agendat2.dao.UserDAO;
+import com.university.project.agendat2.model.Person;
 import com.university.project.agendat2.model.User;
 
+import javax.jws.soap.SOAPBinding;
 import java.sql.SQLException;
 
 /**
@@ -42,9 +44,41 @@ public class UserBL {
 
     public int insert(User user) throws ApplicationException{
         try {
+            if (this.getByDni(user.getPerson().getDni())){
+                throw new ApplicationException("Ya existe un usuario con este DNI");
+            }
+            if (this.isNotValid(user)){
+                throw new EntityNotValidException();
+            }
             return UserDAO.getInstance().insert(user);
-        }catch (SQLException e){
+        }catch (SQLException e) {
             throw new InsertTransactionException();
+        }catch (ApplicationException e){
+            throw e;
+        }catch (Exception e){
+            throw new UnknowException();
+        }
+    }
+
+    public boolean getByDni(String dni) throws ApplicationException{
+        try{
+            return UserDAO.getInstance().getByDni(dni);
+        }catch (SQLException e){
+            throw new SelectTransactionException();
+        }catch (Exception e){
+            throw new UnknowException();
+        }
+    }
+
+    private boolean isNotValid(User user) throws ApplicationException{
+        try {
+            Person person = user.getPerson();
+            return  (person.getName().trim().isEmpty()
+                        || person.getLastName().trim().isEmpty()
+                        || person.getCellphoneNumber().trim().isEmpty()
+                        || person.getEmail().trim().isEmpty()
+                        || person.getDni().trim().isEmpty()
+                        || person.getSex().toString().trim().isEmpty());
         }catch (Exception e){
             throw new UnknowException();
         }

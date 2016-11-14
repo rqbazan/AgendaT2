@@ -14,7 +14,7 @@
             <div class="container">
                 <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2" aria-expanded="false" aria-controls="exCollapsingNavbar2" aria-label="Toggle navigation"></button>
                 <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
-                    <a class="navbar-brand" href="/">AgendaT2</a>
+                    <a class="navbar-brand" href="${pageContext.request.contextPath}/">AgendaT2</a>
                     <ul class="nav navbar-nav">
                         <li class="nav-item dropdown float-xs-right">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

@@ -8,8 +8,6 @@
       <element id="module-output" name="Persistencia" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.6/mysql-connector-java-5.1.6.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/jgoodies/forms/1.2.1/forms-1.2.1.jar" path-in-jar="/" />
-      <element id="library" level="project" name="Maven: com.jgoodies:forms:1.2.1" />
-      <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.6" />
       <element id="library" level="project" name="Maven: org.springframework:spring-aop:4.3.3.RELEASE" />
       <element id="library" level="project" name="Maven: org.springframework:spring-beans:4.3.3.RELEASE" />
       <element id="library" level="project" name="Maven: org.springframework:spring-context:4.3.3.RELEASE" />
@@ -17,6 +15,8 @@
       <element id="library" level="project" name="Maven: org.springframework:spring-expression:4.3.3.RELEASE" />
       <element id="library" level="project" name="Maven: org.springframework:spring-web:4.3.3.RELEASE" />
       <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:4.3.3.RELEASE" />
+      <element id="library" level="project" name="Maven: com.jgoodies:forms:1.2.1" />
+      <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.6" />
     </root>
   </artifact>
 </component>

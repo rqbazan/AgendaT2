@@ -88,4 +88,20 @@ public class UserDAO {
         }
     }
 
+    public boolean getByDni(String dni) throws Exception{
+        Connection conn = null;
+        try {
+            conn = Conexion.getConnection();
+            CallableStatement cst = conn.prepareCall("{call sp_GetUserByDni(?)}");
+            cst.setString(1, dni);
+            ResultSet rs = cst.executeQuery();
+            return rs.next();
+        }catch (Exception e){
+            throw e;
+        }finally {
+            if (conn != null)
+                conn.close();
+        }
+    }
+
 }
